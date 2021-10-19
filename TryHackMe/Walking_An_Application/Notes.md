@@ -45,9 +45,9 @@ Link to room: https://tryhackme.com/room/walkinganapplication
 - Task 4	
 	- What is the flag behind the paywall?
 		- How to get the flag?
-			1. https://10-10-167-87.p.thmlabs.com/
-			2. https://10-10-167-87.p.thmlabs.com/news
-			3. https://10-10-167-87.p.thmlabs.com/news/article?id=3
+			1. https://xx-xx-xxx-xx.p.thmlabs.com/
+			2. https://xx-xx-xxx-xx.p.thmlabs.com/news
+			3. https://xx-xx-xxx-xx.p.thmlabs.com/news/article?id=3
 			4. Blocker showing up [[Block.PNG]]
 				1. F12 				
 				2. Inspector
@@ -62,5 +62,22 @@ Link to room: https://tryhackme.com/room/walkinganapplication
 - Task 5
 	- What is the flag in the red box?
 		- How to get the flag?
-			1. 
-			
+			1. https://xx-xx-xxx-xx.p.thmlabs.com/contact
+			2. Stop the flash\['remove'\]\(\) [[Flash_Function.PNG]]
+				1. F12
+				2. Debugger
+				3. assets/flash.min.js
+				4. {} for pretty print
+				5. setTimeout function
+				6. click (Firefox turns it blue when a breakpoint is in)
+		- Flag: THM{CATCH_ME_IF_YOU_CAN}
+
+- Task 6
+	- What is the flag shown on the contact-msg network request?
+		- How to get the flag?
+			1. https://xx-xx-xxx-xx.p.thmlabs.com/contact
+			2. F12 -> Network
+			3. Insert information for Name, Email, and Message
+			4. In Network, look for new activity [[Post_Request.PNG]]
+			5. Read response
+		- Flag: THM{GOT_AJAX_FLAG}
