@@ -34,10 +34,10 @@ Link to room: https://tryhackme.com/room/walkinganapplication
 	- What is the framework flag?
 		- How to get the flag?
 			1. view-source:https://xx-xx-xxx-xx.p.thmlabs.com/
-			2. ![Framework_Flag.PNG](Framework_Flag.PNG)
+			2. [[Framework_Flag.PNG]()
 			3. https://static-labs.tryhackme.cloud/sites/thm-web-framework/
 			4. https://static-labs.tryhackme.cloud/sites/thm-web-framework/changelog.html
-			5. ![tmp_zip_directory.PNG](tmp_zip_directory.PNG)
+			5. [[tmp_zip_directory.PNG]]
 			6. view-source:https://xx-xx-xxx-xx.p.thmlabs.com/tmp.zip
 			7. Unzip and read flag.txt
 		- Flag: THM{KEEP_YOUR_SOFTWARE_UPDATED}
@@ -55,15 +55,15 @@ Link to room: https://tryhackme.com/room/walkinganapplication
 				4. Style Editor
 				5. style.css 
 				6. Look for div.premium-customer-blocker 
-				7. Double click block on the line with display ![Style_information.PNG](Style_information.PNG)
-				8. Change to None ![Post_css_change.PNG](Post_css_change.PNG)
+				7. Double click block on the line with display [[Style_information.PNG]]
+				8. Change to None [[Post_css_change.PNG]]
 		- Flag: THM{NOT_SO_HIDDEN}
 
 - Task 5
 	- What is the flag in the red box?
 		- How to get the flag?
 			1. https://xx-xx-xxx-xx.p.thmlabs.com/contact
-			2. Stop the flash\['remove'\]\(\) ![Flash_Function.PNG](Flash_Function.PNG)
+			2. Stop the flash\['remove'\]\(\) [[Flash_Function.PNG]]
 				1. F12
 				2. Debugger
 				3. assets/flash.min.js
@@ -78,6 +78,6 @@ Link to room: https://tryhackme.com/room/walkinganapplication
 			1. https://xx-xx-xxx-xx.p.thmlabs.com/contact
 			2. F12 -> Network
 			3. Insert information for Name, Email, and Message
-			4. In Network, look for new activity ![Post_Request.PNG](Post_Request.PNG)
+			4. In Network, look for new activity [[Post_Request.PNG]]
 			5. Read response
 		- Flag: THM{GOT_AJAX_FLAG}
